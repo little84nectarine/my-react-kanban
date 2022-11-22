@@ -1,0 +1,46 @@
+.event {
+    background-color: #ffffff;
+    margin: 10px 10%;
+    height: 60px;
+    width: 80%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.event-selected {
+    background-color: #ec7b53;
+    color: #ffffff;
+    margin: 10px 10%;
+    height: 60px;
+    width: 80%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.4s;
+}
+
+.event:hover{
+    background-color: #ee9f82;
+    color: #ffffff;
+    transition: 0.4s;
+}
+
+.eventBarWapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+
+}
+
+.eventspan {
+    font-size:  20px;
+    justify-content: center;
+}
+

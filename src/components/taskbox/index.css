@@ -1,0 +1,117 @@
+.TaskBoxWrapper {}
+
+.header {
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.headerLogo {
+    font-size: 50px;
+    font-weight: 500;
+    vertical-align: middle;
+    text-align: center;
+    margin: auto 40px;
+}
+
+.removeButton {
+    border: 3px solid red;
+    border-radius: 10px;
+    height: 60px;
+    width: 200px;
+    font-size: larger;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.removeButton:hover {
+    background-color: red;
+    color: aliceblue;
+    transition: 0.4s;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    width: 380px;
+    height: fit-content;
+    background-color: #f6f9fa;
+    border-radius: 10px;
+    padding: 2px;
+    margin: 5px;
+    
+}
+
+.columnTitle {
+    font-size: larger;
+    font-style: italic;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;padding: 20px;
+}
+
+.taskBox {
+    background-color: #ffffff;
+    width: 100%;
+    /* height: auto; */
+    border: rgb(189, 189, 189) solid 1px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    transition: 0.4s;
+}
+
+.taskBox:hover {
+    background-color: #f0f0f0;
+    transition: 0.4s;
+}
+
+.taskTitle {
+    overflow-wrap: break-word;
+    margin: 5px;
+}
+
+.taskTitle::before {
+    content: '●';
+    font-style: normal;
+    color: #f19737;
+    margin-right: 10px;
+  }
+
+.taskContent {
+    overflow-wrap: break-word;
+    margin: 10px 15px;
+}
+
+.delete-box {
+    position: relative;
+    bottom: 15px;
+    right: 15px;
+    text-align: end;
+    font-size: 3.5em;
+    font-weight: 300;
+    color: #888;
+    line-height: 0.1em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.delete-box:hover {
+    color: red;
+    font-size: 8em;
+    line-height: 0.2em;
+    transition: 0.5s;
+  }
