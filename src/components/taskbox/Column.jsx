@@ -2,18 +2,23 @@ import React from 'react'
 import MyButton from '../button/MyButton'
 import Task from './Task'
 
-export default function Column({whichColumn, children, tasks, handleClick, currentEvent, setCurrentEvent, setEvents, events }) {
+export default function Column({ provided, snapshot, whichColumn, children, tasks, handleClick, currentEvent, setCurrentEvent, setEvents, events }) {
 
   // console.log(tasks);
   return (
     <div className='column'>
       <div className='columnTitle'>{children}</div>
       <MyButton handleClick={handleClick} />
-      <div className="box">
+      <div className="box"
+        {...provided.droppableProps}
+        ref={provided.innerRef}
+      >
         {
-          tasks.map(item => {
+          tasks.map((item, index) => {
             return (
               <Task
+                draggableId={item.content}
+                index={index}
                 currentEvent={currentEvent}
                 setCurrentEvent={setCurrentEvent}
                 setEvents={setEvents}
@@ -23,6 +28,7 @@ export default function Column({whichColumn, children, tasks, handleClick, curre
             )
           })
         }
+        {provided.placeholder}
       </div>
     </div>
   )
